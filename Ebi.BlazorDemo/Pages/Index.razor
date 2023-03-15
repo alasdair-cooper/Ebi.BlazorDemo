@@ -10,8 +10,14 @@ Welcome to your new app.
 
 <Counter @bind-CurrentCount="currentCount" />
 
+<CascadingValue Value="borderColour">
+    <Counter @bind-CurrentCount="currentCount" />
+</CascadingValue>
+
 <input @bind-value="currentCount" />
 
 @code{
     private int currentCount = 5;
+
+    private string borderColour = "red";
 }

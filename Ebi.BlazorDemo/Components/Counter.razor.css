@@ -1,4 +1,4 @@
 ﻿.counter {
-    border: 5px solid black;
+    border: 5px solid var(--border-color, black);
     padding: 5px;
 }
