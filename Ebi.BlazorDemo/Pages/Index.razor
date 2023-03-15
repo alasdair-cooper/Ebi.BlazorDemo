@@ -23,7 +23,13 @@ Welcome to your new app.
 <input @bind-value="currentCount" />
 
 @code{
-    private int currentCount = 5;
+    private int currentCount;
 
-    private string borderColour = "red";
+    private string? borderColour;
+
+    protected override void OnInitialized()
+    {
+        currentCount = 10;
+        borderColour = "pink";
+    }
 }
