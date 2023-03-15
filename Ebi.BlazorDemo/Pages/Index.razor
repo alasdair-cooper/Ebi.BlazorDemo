@@ -8,10 +8,16 @@ Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
-<Counter @bind-CurrentCount="currentCount" />
+<Counter @bind-CurrentCount="currentCount">
+    <Counter></Counter>
+</Counter>
 
 <CascadingValue Value="borderColour">
-    <Counter @bind-CurrentCount="currentCount" />
+    <Counter @bind-CurrentCount="currentCount">
+        <Counter>
+            <Counter></Counter>
+        </Counter>
+    </Counter>
 </CascadingValue>
 
 <input @bind-value="currentCount" />
